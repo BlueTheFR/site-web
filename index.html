@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes Jeux</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f0f1a;
+      color: #e0e0e0;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background: linear-gradient(135deg, #0a1628, #0d2137, #143d5c);
+      border-bottom: 2px solid #4fc3f7;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      background: linear-gradient(90deg, #4fc3f7, #0d47a1, #4fc3f7);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 3s linear infinite;
+    }
+
+    @keyframes shimmer {
+      to { background-position: 200% center; }
+    }
+
+    header p {
+      margin-top: 10px;
+      color: #aaa;
+      font-size: 1.1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 30px;
+      padding: 50px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #1a1a2e;
+      border-radius: 16px;
+      padding: 30px;
+      border: 1px solid #2a2a4a;
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(79, 195, 247, 0.15);
+      border-color: #4fc3f7;
+    }
+
+    .card .icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .card h2 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .card p {
+      color: #999;
+      line-height: 1.6;
+      flex: 1;
+      margin-bottom: 20px;
+    }
+
+    .card a {
+      display: inline-block;
+      padding: 10px 24px;
+      background: linear-gradient(135deg, #0d47a1, #4fc3f7);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-align: center;
+    }
+
+    .card a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(79, 195, 247, 0.4);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      .grid { padding: 20px; gap: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mes Jeux</h1>
+    <p>Une collection de tous mes projets</p>
+  </header>
+
+  <div class="grid">
+    <div class="card">
+      <div class="icon">⛏️</div>
+      <h2>Mining RNG Simulator</h2>
+      <p>Simulateur de minage RNG. Utilisez différentes pioches et artéfacts pour miner des minerais de plus en plus rares, collectez de l'équipement et améliorez votre luck.</p>
+      <a href="https://bluethefr.github.io/Mining-RNG-Simulator/" target="_blank">Jouer</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">🪨</div>
+      <h2>Mining RNG Simulator 3D</h2>
+      <p>Version 3D du simulateur de minage. Déplacez-vous librement (ZQSD), minez des blocs en 3D, explorez différents mondes (Ombre, Monochrome, Océan, Biome) et activez des succès.</p>
+      <a href="https://bluethefr.github.io/Mining-RNG-Simulator-3D/" target="_blank">Jouer</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌱</div>
+      <h2>Grow a Garden</h2>
+      <p>Jeu de jardinage où vous plantez et récoltez des cultures. Vendez votre récolte pour acheter de nouvelles graines, avec un cycle jour/nuit et une météo dynamique.</p>
+      <a href="https://bluethefr.github.io/Grow-a-garden/" target="_blank">Jouer</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">⚔️</div>
+      <h2>MMO Horde Survivor</h2>
+      <p>Jeu de survie par vagues. Choisissez entre Fighter, Archer ou Mage, montez de niveau, attribuez des stats, débloquez des talents et survivez le plus longtemps possible.</p>
+      <a href="https://bluethefr.github.io/MMO-solo/" target="_blank">Jouer</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">🎨</div>
+      <h2>Pixel Canvas</h2>
+      <p>Pixel art collaboratif en ligne. Placez des pixels un par un sur un canvas partagé, avec système de cooldown, nécésite un compte utilisateur.</p>
+      <a href="https://pixel-canva.onrender.com/" target="_blank">Jouer</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">🔨</div>
+      <h2>Forging Master</h2>
+      <p>Jeu de forge où vous créez et améliorez votre équipement (casque, arme, armure, etc.). Montez le niveau de votre forge, débloquez des compétences dans l'arbre et combattez en PvP.</p>
+      <a href="https://bluethefr.github.io/Forging-master/" target="_blank">Jouer</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2026 BlueTheFr &mdash; Tous droits réservés
+  </footer>
+</body>
+</html>
